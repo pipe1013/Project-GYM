@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2&family=Poppins:ital@1&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.login-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh; /* Asegura que la página ocupe toda la altura del viewport */
+    padding-bottom: 3rem; /* Espacio para el footer */
+}
+
+.image-container {
+    width: 100%;
+    overflow: hidden;
+    padding-bottom: 5rem; /* Ajusta el espacio entre la imagen y la card del login */
+}
+
+.login-image {
+    width: 100%;
+    height: 400px; /* Establece una altura fija para la imagen */
+    object-fit: cover; /* Mantiene el aspecto de la imagen */
+}
+
+.container {
+    width: 400px;
+    max-width: 500px;
+    border-radius: 2rem;
+    background: white;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 4px 6px rgba(0, 0, 0, 0.1);
+    transform-style: preserve-3d;
+    transform: rotateX(2deg) rotateY(2deg);
+    transition: transform 0.5s, box-shadow 0.5s;
+    margin-bottom: 2rem; /* Ajusta el espacio entre la card de login y el footer */
+}
+
+.container:hover {
+    transform: rotateX(0deg) rotateY(0deg);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.form__title {
+    margin-bottom: 2.5rem;
+    text-align: center;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--color-primary);
+}
+
+.form__input-group {
+    margin-bottom: 1.5rem; /* Ajusta el margen entre los grupos de entrada */
+}
+
+.form__input {
+    display: block;
+    width: calc(100% - 2rem); /* Ajusta el espacio entre el borde de la card y el input */
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    border: 1px solid #ddd;
+    background: #eee;
+    font-size: 1.1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background 0.2s, border-color 0.2s;
+    margin: 0 auto; /* Centra el input dentro de su grupo */
+}
+
+.form__input:focus {
+    border-color: var(--color-primary);
+    background: #fff;
+    outline: none;
+}
+
+.form__button {
+    width: 100%;
+    padding: 1.2rem 2.5rem;
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: #fff;
+    border: none;
+    border-radius: var(--border-radius);
+    background: #7b848b; /* Cambia el color del botón */
+    cursor: pointer;
+    transition: transform 0.2s, background 0.2s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.form__button:hover {
+    background: #000000; /* Cambia el color de fondo en el hover */
+}
+
+.form__button:active {
+    transform: scale(0.98);
+}

@@ -1,0 +1,54 @@
+/* src/components/Footer.css */
+
+footer {
+    background-color: #222;
+    color: #fff;
+    padding: 10px 50px; /* Reduce el padding vertical para hacer el footer más corto */
+    text-align: left;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Espacio entre las columnas */
+    align-items: flex-start; /* Alineación de las columnas al inicio */
+    gap: 20px;
+}
+
+.footer-section {
+    flex: 1; /* Permite que las secciones tomen un espacio equitativo */
+    min-width: 200px; /* Mínimo ancho para asegurar buena distribución en pantallas pequeñas */
+    margin-bottom: 10px; /* Reduce el margen inferior para disminuir la altura total */
+}
+
+.footer-section h4 {
+    margin-bottom: 5px; /* Reduce el margen inferior para disminuir la altura total */
+    font-size: 1.1rem; /* Ajusta el tamaño del texto del título */
+    text-transform: uppercase;
+    color: #c24608; /* Color destacado para los títulos */
+}
+
+.footer-section p {
+    margin: 3px 0; /* Reduce el margen de los párrafos para hacer el footer más compacto */
+    font-size: 0.9rem; /* Ajusta el tamaño del texto del párrafo */
+}
+
+.footer-social, .footer-legal {
+    width: 100%; /* Tomará el ancho completo en dispositivos pequeños */
+    text-align: center; /* Centrado para las redes sociales y enlaces legales */
+    margin-top: 10px; /* Reduce el margen superior para compactar el footer */
+}
+
+.footer-social a, .footer-legal a {
+    color: #c24608;
+    text-decoration: none;
+    margin: 0 10px; /* Reduce el margen horizontal entre enlaces */
+    font-size: 1.1rem; /* Ajusta el tamaño del texto del enlace */
+    transition: color 0.3s;
+}
+
+.footer-social a:hover, .footer-legal a:hover {
+    color: #e07b39; /* Cambia el color en hover para mayor claridad */
+}
+
+.footer-legal {
+    font-size: 0.8rem; /* Ajusta el tamaño del texto para los enlaces legales */
+    margin-top: 5px; /* Reduce el margen superior para compactar el footer */
+}

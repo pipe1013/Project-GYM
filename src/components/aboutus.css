@@ -1,0 +1,233 @@
+/* Estilos generales */
+.about-us {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+/* Sección de introducción */
+.intro-section {
+    background-image: url('../assets/images/background.jpg'); /* Ruta a la imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    position: relative;
+}
+
+.intro-section .overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.intro-section h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+.intro-section p {
+    font-size: 1.5em;
+}
+
+/* Sección de visión y misión */
+.vision-mission {
+    display: flex;
+    justify-content: space-around;
+    margin: 40px 0;
+    padding: 0 20px;
+    perspective: 1500px; /* Añade perspectiva para el efecto 3D */
+}
+
+.vision-mission .vision, .vision-mission .mission {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 12px;
+    width: 45%;
+    height: 250px;
+    text-align: center;
+    position: relative;
+    transition: transform 0.8s ease; /* Aumenta la duración de la transición para suavizar el efecto */
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    backface-visibility: hidden;
+}
+
+/* Añadir un pequeño retraso antes de que se active el efecto de giro */
+.vision-mission .vision:hover, .vision-mission .mission:hover {
+    transform: rotateY(180deg);
+    transition-delay: 0.1s; /* Añade un retraso al hover */
+}
+
+.vision-mission h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.vision-mission p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+/* Cara trasera de las tarjetas */
+.vision-mission .vision::before, .vision-mission .mission::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+    transition: transform 0.8s ease; /* Sincroniza la duración de la transición */
+}
+
+.vision-mission .vision::before {
+    content: 'Nuestra Visión: Inspirar a todos para lograr sus objetivos de fitness.';
+}
+
+.vision-mission .mission::before {
+    content: 'Nuestra Misión: Ofrecer entrenamiento y motivación excepcionales para nuestros miembros.';
+}
+
+/* Sección de equipo */
+.team {
+    padding: 20px;
+    background-color: #f8f8f8;
+    text-align: center;
+}
+
+.team h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.team-intro {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+}
+
+.team-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.team-member {
+    width: 30%;
+    margin-bottom: 20px;
+    text-align: left;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.team-img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.team-info h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.team-info p {
+    font-size: 1em;
+    color: #666;
+}
+
+/* Sección de valores */
+.values {
+    padding: 40px 20px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+}
+
+.values h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+
+.values-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.value-item {
+    width: 30%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.value-item i {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+    color: #ffcc00;
+}
+
+.value-item h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.value-item p {
+    font-size: 1.1em;
+}
+/* src/components/aboutus.css */
+
+/* ...otros estilos... */
+
+.team-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 40px; /* Aumenta el espacio entre las tarjetas */
+  }
+  
+  .team-member {
+    width: 400px; /* Aumenta el ancho de la tarjeta */
+    perspective: 1200px; /* Mantén la perspectiva adecuada para el tamaño aumentado */
+  }
+  
+  .team-img {
+    width: 100%;
+    height: 300px; /* Aumenta la altura de la imagen */
+    border-radius: 12px; /* Ajusta el radio de borde para adaptarse al nuevo tamaño */
+    transition: transform 0.3s ease;
+  }
+  
+  .team-info {
+    text-align: center;
+    padding: 20px; /* Aumenta el padding para dar más espacio al texto */
+    background-color: #fff;
+    border-radius: 12px; /* Ajusta el radio de borde */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Ajusta la sombra para adaptarse al nuevo tamaño */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Efecto 3D al hacer hover en la tarjeta */
+  .team-member:hover .team-img,
+  .team-member:hover .team-info {
+    transform: rotateY(15deg) rotateX(15deg) scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Ajusta la sombra en el hover */
+  }
+  
+  /* Efecto de profundidad adicional en el hover */
+  .team-member:hover .team-info {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.3); /* Aumenta la sombra en el hover */
+  }
+  
+  

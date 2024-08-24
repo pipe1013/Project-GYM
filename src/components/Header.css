@@ -1,0 +1,49 @@
+/* src/components/Header.css */
+
+header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1; /* Asegura que el header esté sobre el contenido */
+    background: none; /* Elimina el fondo para que se vea la imagen */
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    background-color: #949090; /* Fondo gris claro */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 5px; /* Espaciado alrededor del logo */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra sutil para destacar el logo */
+}
+
+.logo {
+    height: 50px; /* Ajusta la altura del logo según sea necesario */
+    width: auto;
+    text-shadow: none; /* Elimina la sombra del texto del logo */
+}
+
+nav {
+    display: flex;
+    gap: 15px; /* Espacio entre los elementos del menú */
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    border: 10px solid transparent;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background-color: rgb(58, 63, 75);
+}

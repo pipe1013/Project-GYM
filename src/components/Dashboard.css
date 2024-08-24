@@ -1,0 +1,159 @@
+.dashboard {
+    font-family: Arial, sans-serif;
+    color: white;
+    text-align: center;
+  }
+  
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 10px;
+    background: url('../assets/images/background.jpg') no-repeat center center;
+    background-size: cover;
+    height: calc(90vh - 1px);
+    color: white;
+  }
+  
+  .main-content h1 {
+    font-size: 4rem; /* Tamaño del texto del h1 */
+    margin-bottom: 10px; /* Reducido aún más el margen inferior para pegar el texto al botón */
+    margin-left: 80px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra para hacer el texto más visible */
+  }
+  
+  /* Estilos para el botón 3D */
+  .button-row {
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  height: 28%; 
+  margin-right: 5%;
+  }
+  
+  .button-row > div {
+  position: relative;
+  width: 200px; 
+  height: 70px; 
+  margin: 0 15px;
+  perspective: 1000px;
+  }
+  
+  .button-row > div > a {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  transform: translateZ(-35px); 
+  transition: transform 0.25s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  .button-row > div > a::before,
+  .button-row > div > a::after {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  width: 200px; 
+  height: 70px; 
+  position: absolute;
+  border: 5px solid black;
+  box-sizing: border-box;
+  content: attr(title);
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 20px; 
+  }
+  
+  .button-row > div > a::before {
+  background-color: #000;
+  color: #fff;
+  transform: rotateY(0deg) translateZ(35px); 
+  }
+  
+  .button-row > div > a::after {
+  background-color: #fff;
+  border-color: #000;
+  color: #000;
+  transform: rotateX(90deg) translateZ(35px); 
+  }
+  
+  .button-row > div > a:hover {
+  transform: translateZ(-35px) rotateX(-90deg); 
+  }
+/* Sección del video */
+.video-section {
+padding: 40px 20px;
+background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro para la sección de video */
+color: white;
+text-align: center;
+}
+
+.video-section h2 {
+font-size: 2.5rem;
+margin-bottom: 20px;
+text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.video-container {
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.video-container iframe {
+border-radius: 10px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilos para la sección de nuestros planes */
+.plans-section {
+text-align: center;
+padding: 40px 20px;
+}
+
+.plans-section h2 {
+font-size: 2.5rem;
+margin-bottom: 20px;
+text-transform: uppercase;
+color: #fff;
+text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.cards-container {
+display: flex;
+justify-content: space-around;
+flex-wrap: wrap;
+}
+
+.card {
+perspective: 1000px;
+width: 300px;
+margin: 20px;
+background-color: #fff;
+border-radius: 10px;
+box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+transform-style: preserve-3d;
+transition: transform 0.6s;
+}
+
+.card:hover {
+transform: rotateY(15deg);
+}
+
+.card-content {
+padding: 20px;
+color: #333;
+}
+
+.card-content h3 {
+font-size: 1.5rem;
+margin-bottom: 10px;
+}
+
+.card-content p {
+font-size: 1rem;
+margin-bottom: 10px;
+}

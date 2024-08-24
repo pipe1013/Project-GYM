@@ -1,0 +1,99 @@
+/* src/components/Clases.css */
+
+.clases-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #2e2e2e; /* Fondo oscuro */
+    color: #f0f0f0; /* Color de texto claro */
+    border-radius: 12px;
+}
+
+.clases-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: #fff;
+}
+
+.clases-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espacio entre las tarjetas de clases */
+}
+
+.clase-item {
+    background: linear-gradient(145deg, #333, #444); /* Gradiente para el fondo */
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4), -4px -4px 8px rgba(0, 0, 0, 0.2); /* Sombra 3D */
+    transform: rotateX(2deg) rotateY(-2deg); /* Efecto 3D */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transición suave para efectos */
+}
+
+.clase-item:hover {
+    transform: rotateX(0deg) rotateY(0deg) scale(1.05); /* Efecto de elevación al pasar el ratón */
+    box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.5), -8px -8px 16px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
+}
+
+.clase-item p {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #f0f0f0;
+}
+
+.clase-item button {
+    background-color: #f58711; /* Color verde para el botón */
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 8px;
+    margin-top: 10px;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra del botón */
+}
+
+.clase-item button:hover {
+    background-color: #f58711   ; /* Verde más oscuro en hover */
+    transform: scale(1.05); /* Efecto de escala en hover */
+}
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000; /* Asegúrate de que el modal esté por encima del contenido */
+}
+
+.modal-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+    transform: scale(1);
+    transition: transform 0.3s ease;
+}
+
+.modal-content h3 {
+    margin-bottom: 15px;
+    color: #ec8014; /* Color de texto */
+}
+
+.modal-content p {
+    font-size: 16px;
+    color: #ffffff;
+}
+
+.modal-content button:active {
+    transform: scale(0.98);
+}

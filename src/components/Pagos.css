@@ -1,0 +1,46 @@
+/* src/components/Pagos.css */
+
+.pagos-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #2e2e2e; /* Fondo oscuro */
+    color: #f0f0f0; /* Color de texto claro */
+    border-radius: 8px;
+}
+
+.pagos-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.pagos-form label {
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.pagos-form input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #444; /* Borde oscuro */
+    border-radius: 5px;
+    background-color: #333; /* Fondo oscuro para los campos */
+    color: #f0f0f0; /* Texto claro en los campos */
+}
+
+.pagos-form button {
+    background-color: #f58711; /* Color verde para el botón */
+    color: white;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.pagos-form button:hover {
+    background-color: #f58711   ; /* Verde más oscuro en hover */
+}

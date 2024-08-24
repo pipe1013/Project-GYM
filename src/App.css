@@ -1,0 +1,82 @@
+/* src/App.css */
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+}
+
+/* Elimina el fondo del header, ya que lo gestionamos en Header.css */
+header {
+  background-color: transparent;
+  color: #fff;
+  padding: 0; /* El padding ya se maneja en Header.css */
+}
+
+/* Asegúrate de que el logo esté alineado como lo especificamos en Header.css */
+header .logo {
+  font-size: 1.8em;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Refleja el estilo de Header.css */
+}
+
+/* Ajusta el nav para que coincida con el diseño del Header.css */
+nav {
+  display: flex; /* Flexbox para alinear los elementos */
+  justify-content: flex-end; /* Alinea los enlaces a la derecha */
+}
+
+
+/* Estilos del footer */
+footer {
+  color: #fff;
+  padding: 10px 20px;
+  text-align: center;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0 10px;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Contenedor principal */
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+/* Botones generales */
+.button {
+  background-color: #555;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #777;
+}
+
+/* Diseño adaptable */
+@media (max-width: 768px) {
+  nav {
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav a {
+    display: block;
+    padding: 10px 0;
+    margin: 5px 0;
+  }
+}
