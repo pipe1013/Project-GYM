@@ -1,0 +1,117 @@
+/* src/components/Admin.css */
+
+.admin-container {
+    display: flex;
+    height: 100vh;
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+    position: relative;
+}
+
+.admin-nav {
+    width: 250px;
+    background-color: #333;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 100vh;
+    position: fixed;
+}
+
+.admin-nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    flex: 1;
+}
+
+.admin-nav ul li {
+    margin: 15px 0;
+}
+
+.admin-nav ul li a {
+    display: block;
+    text-decoration: none;
+    color: #f0f0f0;
+    font-size: 18px;
+    padding: 10px;
+    background-color: #444;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.admin-nav ul li a:hover {
+    background-color: #555;
+}
+
+.admin-nav .logout-button {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+.admin-nav .logout-button:hover {
+    background-color: #e03e3e;
+}
+
+.admin-content {
+    flex: 1;
+    padding: 20px;
+    margin-left: 250px;
+    overflow-y: auto;
+    position: relative;
+}
+
+/* Estilos para la animación */
+.animation-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo semi-transparente */
+    position: absolute; /* Cambiado a absolute */
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 5; /* Ajustar z-index según sea necesario */
+}
+
+.animation-text {
+    font-size: 60px;
+    -webkit-box-reflect: below -22px linear-gradient(transparent, #0009);
+}
+
+.animation-text span {
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 800;
+    display: inline-block;
+    animation: move 2s ease-in-out infinite;
+}
+
+.animation-text span:nth-child(1) { animation-delay: 0.1s; }
+.animation-text span:nth-child(2) { animation-delay: 0.2s; }
+.animation-text span:nth-child(3) { animation-delay: 0.3s; }
+.animation-text span:nth-child(4) { animation-delay: 0.4s; }
+.animation-text span:nth-child(5) { animation-delay: 0.5s; }
+.animation-text span:nth-child(6) { animation-delay: 0.6s; }
+.animation-text span:nth-child(7) { animation-delay: 0.7s; }
+.animation-text span:nth-child(8) { animation-delay: 0.8s; }
+.animation-text span:nth-child(9) { animation-delay: 0.9s; }
+.animation-text span:nth-child(10) { animation-delay: 1.0s; }
+.animation-text span:nth-child(11) { animation-delay: 1.1s; }
+.animation-text span:nth-child(12) { animation-delay: 1.2s; }
+
+@keyframes move {
+    0%, 40%, 100% { transform: translateY(0); }
+    20% { transform: translateY(-30px); }
+}

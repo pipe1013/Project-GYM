@@ -1,0 +1,218 @@
+/* src/components/PagosAdmin.css */
+
+.admin-container {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.filter-container {
+    margin-bottom: 20px;
+}
+
+.search-input,
+.month-filter {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #444;
+    background-color: #222;
+    color: #fff;
+    margin-right: 10px;
+}
+
+.add-payment-button {
+    background-color: #28a745; /* Verde para el botón */
+    color: white;
+    border: none;
+    padding: 15px 30px; /* Botón más grande */
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-right: 10px;
+}
+
+.add-payment-button:hover {
+    background-color: #218838; /* Verde más oscuro en hover */
+}
+
+.download-button {
+    background-color: #004af6; /* Rojo para el botón */
+    color: white;
+    border: none;
+    padding: 10px 20px; /* Botón más pequeño */
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+}
+
+.download-button:hover {
+    background-color: #004af6; /* Rojo más oscuro en hover */
+}
+
+.payments-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    background-color: #333; /* Fondo oscuro para la tabla */
+    color: #f0f0f0; /* Color de texto claro */
+    border-radius: 8px;
+    overflow: hidden; /* Para que los bordes redondeados se apliquen a las celdas también */
+}
+
+.payments-table th,
+.payments-table td {
+    padding: 15px; /* Espaciado en las celdas */
+    border-bottom: 1px solid #444; /* Línea separadora entre filas */
+    text-align: left;
+}
+
+.payments-table th {
+    background-color: #444; /* Fondo para los encabezados de la tabla */
+    color: #f0f0f0; /* Color del texto en los encabezados */
+}
+
+.payments-table tr:hover {
+    background-color: #555; /* Color de fondo cuando se pasa el ratón sobre una fila */
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: #2e2e2e;
+    color: #f0f0f0;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 600px;
+    width: 100%;
+}
+
+.client-select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #444;
+    background-color: #222;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.action-button {
+    background-color: #28a745; /* Verde para el botón */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: background-color 0.3s;
+}
+
+.action-button:hover {
+    background-color: #218838; /* Verde más oscuro en hover */
+}
+
+.cancel-button {
+    background-color: #dc3545; /* Rojo para el botón */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cancel {
+        background-color: #dc3545; /* Rojo para el botón */
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+}
+
+.cancel:hover {
+    background-color: #c82333; /* Rojo más oscuro en hover */
+}
+
+.cancel-button:hover {
+    background-color: #c82333; /* Rojo más oscuro en hover */
+}
+
+.pagos-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #2e2e2e; /* Fondo oscuro */
+    color: #f0f0f0; /* Color de texto claro */
+    border-radius: 8px;
+}
+
+.pagos-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.pagos-form label {
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.pagos-form input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #444; /* Borde oscuro */
+    border-radius: 5px;
+    background-color: #333; /* Fondo oscuro para los campos */
+    color: #f0f0f0; /* Texto claro en los campos */
+}
+
+.pagos-form button.submit-button {
+    background-color: #28a745; /* Verde para el botón Añadir */
+    color: white;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.pagos-form button.submit-button:hover {
+    background-color: #218838; /* Verde más oscuro en hover */
+}
+
+.pagos-form button.cancel-button {
+    background-color: #dc3545; /* Rojo para el botón Cancelar */
+    color: white;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.pagos-form button.cancel-button:hover {
+    background-color: #c82333; /* Rojo más oscuro en hover */
+}

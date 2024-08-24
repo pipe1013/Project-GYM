@@ -11,9 +11,12 @@ const Login = () => {
 
     const handleLogin = (e) => {
         e.preventDefault();
-        // Lógica de autenticación aquí
-        if (username === 'user' && password === 'pass') {
-            navigate('/cliente'); // Redirige al perfil de cliente
+
+        // Lógica de autenticación actualizada
+        if (username === 'userClient' && password === 'passClient') {
+            navigate('/cliente'); // Redirige al panel del cliente
+        } else if (username === 'userAdmin' && password === 'passAdmin') {
+            navigate('/admin'); // Redirige al panel del administrador
         } else {
             alert('Username or password is incorrect');
         }

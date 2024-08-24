@@ -1,7 +1,7 @@
 /* src/components/Pagos.css */
 
 .pagos-container {
-    max-width: 600px;
+    max-width: 700px;
     margin: 0 auto;
     padding: 20px;
     background-color: #2e2e2e; /* Fondo oscuro */
@@ -9,38 +9,122 @@
     border-radius: 8px;
 }
 
-.pagos-form {
+.card-info {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 30px;
 }
 
-.pagos-form label {
-    margin-bottom: 15px;
-    font-size: 16px;
+.card {
+    width: 340px; /* Tamaño ajustado */
+    height: 200px; /* Tamaño ajustado */
+    perspective: 1000px; /* Establece la perspectiva para el 3D */
+    position: relative;
 }
 
-.pagos-form input {
+.card-front, .card-back {
     width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #444; /* Borde oscuro */
-    border-radius: 5px;
-    background-color: #333; /* Fondo oscuro para los campos */
-    color: #f0f0f0; /* Texto claro en los campos */
+    height: 100%;
+    border-radius: 10px;
+    position: absolute;
+    backface-visibility: hidden; /* Oculta la cara posterior cuando está girada */
+    transition: transform 0.6s, box-shadow 0.6s;
+    transform-style: preserve-3d;
 }
 
-.pagos-form button {
-    background-color: #f58711; /* Color verde para el botón */
-    color: white;
-    border: none;
-    padding: 15px;
-    cursor: pointer;
-    font-size: 16px;
-    border-radius: 5px;
+.card-front {
+    background: linear-gradient(135deg, #1a1a1a, #333); /* Color de tarjeta oscuro */
+    color: #fff;
+    padding: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    border: 2px solid #d4af37; /* Bordes dorados */
+}
+
+.card-back {
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+    transform: rotateY(180deg); /* Gira la tarjeta para mostrar la parte posterior */
+    padding: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    border: 2px solid #d4af37; /* Bordes dorados */
+}
+
+.card-info:hover .card {
+    transform: rotateY(180deg); /* Rota la tarjeta cuando se pasa el mouse */
+}
+
+
+.card-number {
+    font-size: 22px; /* Ajuste en el tamaño del texto */
+    letter-spacing: 2px;
+    margin-top: 20px;
+}
+
+.card-name, .card-expiry, .bank-name {
+    font-size: 14px; /* Ajuste en el tamaño del texto */
+}
+
+.card-details {
+    display: flex;
+    justify-content: space-between;
     margin-top: 10px;
-    transition: background-color 0.3s;
 }
 
-.pagos-form button:hover {
-    background-color: #f58711   ; /* Verde más oscuro en hover */
+.card-name {
+    font-weight: bold;
+}
+
+.card-expiry {
+    font-style: italic;
+}
+
+.bank-name {
+    font-size: 16px; /* Tamaño de fuente para el nombre del banco */
+    margin-bottom: 10px;
+}
+
+.card-back .strip {
+    background: linear-gradient(135deg, #000, #555);
+    height: 20px; /* Ajuste en el tamaño de la franja */
+    margin-bottom: 20px;
+}
+
+.card-back .card-cvv {
+    font-size: 14px; /* Ajuste en el tamaño del texto */
+}
+
+.payment-history-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.payment-history-table th,
+.payment-history-table td {
+    padding: 12px;
+    border: 1px solid #444; /* Borde oscuro */
+    text-align: left;
+}
+
+.payment-history-table th {
+    background-color: #333;
+    color: #151716; /* Color verde para los encabezados */
+}
+
+.payment-history-table tbody tr:nth-child(even) {
+    background-color: #3a3a3a;
+}
+
+.payment-history-table tbody tr:nth-child(odd) {
+    background-color: #2e2e2e;
+}
+
+.payment-history-table tbody tr:hover {
+    background-color: #e1700d; /* Color verde claro en hover */
+    color: #fff;
+}
+
+.payment-history-table th, td {
+    color: #f0f0f0;
+    font-size: 16px;
 }

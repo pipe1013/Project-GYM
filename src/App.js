@@ -11,17 +11,23 @@ import Client from './components/Client';
 import Clases from './components/Clases';
 import Pagos from './components/Pagos';
 import MyProfile from './components/MyProfile';
+import Admin  from './components/AdminPanel'; // Importa el nuevo componente AdminPanel
+import Usuarios from './components/Usuarios';
+import ClasesAdmin from './components/ClasesAdmin';
+import PagosAdmin from './components/PagosAdmin';
 import './App.css';
 
 const Layout = ({ children }) => {
     const location = useLocation();
 
+    // Oculta el Header y el Footer en las rutas del panel de cliente o administración
+    const isPanelRoute = location.pathname.startsWith('/cliente') || location.pathname.startsWith('/admin');
+
     return (
         <>
-            {/* Renderizar Header y Footer solo si no estamos en la ruta "/cliente" o sus subrutas */}
-            {location.pathname.startsWith('/cliente') ? null : <Header />}
+            {!isPanelRoute && <Header />}
             <main>{children}</main>
-            {location.pathname.startsWith('/cliente') ? null : <Footer />}
+            {!isPanelRoute && <Footer />}
         </>
     );
 };
@@ -40,7 +46,21 @@ const App = () => {
                     <Route path="/cliente" element={<Client />}>
                         <Route path="clases" element={<Clases />} />
                         <Route path="pagos" element={<Pagos />} />
+                        <Route path="perfil" element={<MyProfile />} />
+                    </Route>
+                    
+                     {/* Rutas para el panel del cliente */}
+                     <Route path="/cliente" element={<Client />}>
+                        <Route path="clases" element={<Clases />} />
+                        <Route path="pagos" element={<Pagos />} />
                         <Route path="perfile" element={<MyProfile />} />
+                    </Route>
+
+                    {/* Rutas para el panel del administrador */}
+                    <Route path="/admin" element={<Admin />}>
+                        <Route path="usuarios" element={<Usuarios />} />
+                        <Route path="clases" element={<ClasesAdmin />} />
+                        <Route path="pagos" element={<PagosAdmin />} />
                     </Route>
                 </Routes>
             </Layout>
